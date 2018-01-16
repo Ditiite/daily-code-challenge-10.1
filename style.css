@@ -168,7 +168,7 @@
 .second {
     background-color: silver;
     color: #555;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -183,8 +183,12 @@ img {
     mask-position: center center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    z-index: 0;
 }
 
+.display-small {
+    display: none;
+}
 .second h2 {
     position: absolute;
     display: block;
@@ -202,12 +206,10 @@ img {
     position: absolute;
     display: block;
     text-align: center;
-    left: 50%;
+    left:20%;
+    right: 20%;
     top: 60%;
-    text-align: center;
-    transform: translatex(50%);
-    transform: translateY(60%);
-    transform: translate(-50%);  
+    text-align: center;    
     line-height: 30px;
     font-family: 'Josefin Slab', serif;
 }
@@ -216,15 +218,89 @@ img {
     position: absolute;
     display: block;
     text-align: center;
-    left: 50%;
     bottom: 10%;
-    text-align: center;
-    transform: translatex(50%);
-    transform: translate(-50%);  
+    left:40%;
+    right: 40%;
     font-family: 'Josefin Slab', serif;
 }
 
 .follow a {
     text-decoration: none;
     color: rgb(66, 66, 92);
+}
+
+/*********************
+****** @media ********
+*********************/
+@media screen and (max-width: 900px) {
+    .second {
+        height: 100vh;
+    }
+    .main-page-text h1 {
+        font-size: 25px;
+     }
+     .main-page-text p {
+        font-size: 15px;
+     }
+    
+     .second img {
+        width: 400px;
+        height: 350px;
+    }
+    .text {
+        left: 3%;
+        right: 3%;
+        bottom: 13%;
+        top: 60%;   
+        line-height: 20px;
+    }      
+        
+    .follow {        
+        bottom: 5%;      
+        left: 25%;
+        right: 25%;       
+    }    
+}
+@media screen and (max-width: 420px) {
+    .second img {
+        margin: 10px auto;
+    }
+    
+    .text {
+        left:10%;
+        right: 10%;
+        top: 50%;   
+        line-height: 20px;
+    }      
+        
+    .follow {        
+        bottom: 5%;      
+        left: 25%;
+        right: 25%;       
+    }
+    .second h2 { 
+        top: 40%;
+        color: white;
+    }
+    .second img:nth-child(2) {
+        display: none;
+    }
+
+    .second img:first-of-type {
+        display: block;
+        width: 300px;
+        height: 250px;
+        position: abdolute;
+        background: white;
+        -webkit-mask-box-image: -webkit-radial-gradient(white,transparent 50%)
+    }
+
+    img {
+        margin: 20px auto;
+        display: block;
+        width: 100%;
+        height: 400px;
+        -webkit-mask-image: none;
+        mask-image: url(images/jump.jpg);
+    }
 }
