@@ -41,6 +41,10 @@
     margin: 10px;
  }
  
+ #sidebar li:hover {
+    color: rgb(17, 101, 228);
+ }
+
  #toggle-btn {
     position: absolute;
     left: 30px;
@@ -166,7 +170,7 @@
 
 /* mask effect from https://tympanus.net/codrops/css_reference/mask-image/ */
 .second {
-    background-color: silver;
+    background-color: rgb(224, 223, 223);
     color: #555;
     font-size: 1.2em;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -302,5 +306,9 @@ img {
         height: 400px;
         -webkit-mask-image: none;
         mask-image: url(images/jump.jpg);
+    }
+    
+    #sidebar {
+        background-color: transparent;
     }
 }
