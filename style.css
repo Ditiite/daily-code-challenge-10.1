@@ -43,6 +43,7 @@
  
  #sidebar li:hover {
     color: rgb(17, 101, 228);
+    cursor: pointer;
  }
 
  #toggle-btn {
@@ -307,7 +308,7 @@ img {
         -webkit-mask-image: none;
         mask-image: url(images/jump.jpg);
     }
-    
+
     #sidebar {
         background-color: transparent;
     }
